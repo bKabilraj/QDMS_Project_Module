@@ -34,7 +34,7 @@ public class RealPOMCustomer {
 
 		
 		RealPOMCustomerPageObjects.master.click();
-		Thread.sleep(3300);
+		Thread.sleep(3300); 
 		
 		RealPOMCustomerPageObjects.customer.click();
 		Thread.sleep(3200);
@@ -66,7 +66,7 @@ public class RealPOMCustomer {
 		Thread.sleep(3200);
 		RealPOMCustomerPageObjects.enterCustomer2.sendKeys(Keys.ENTER);
 				
-		RealPOMCustomerPageObjects.selectContactPerson.sendKeys("Kabil_Contact05");
+		RealPOMCustomerPageObjects.selectContactPerson.sendKeys("Kabil_Contact08");
 		RealPOMCustomerPageObjects.enterContactNumber.sendKeys("0779434695");
 		RealPOMCustomerPageObjects.selectDate.sendKeys("2022-12-17");
 		RealPOMCustomerPageObjects.selectDate.sendKeys(Keys.RETURN);

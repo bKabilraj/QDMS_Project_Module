@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-23T08:50:47 IST" name="Default suite" finished-at="2022-12-23T08:51:28 IST" duration-ms="41574">
+  <suite started-at="2023-01-03T13:29:17 IST" name="Login suite" finished-at="2023-01-03T13:30:42 IST" duration-ms="85067">
     <groups>
     </groups>
-    <test started-at="2022-12-23T08:50:47 IST" name="Default test" finished-at="2022-12-23T08:51:28 IST" duration-ms="41574">
+    <test started-at="2023-01-03T13:29:17 IST" name="Login test case" finished-at="2023-01-03T13:30:42 IST" duration-ms="85067">
+      <class name="testCases.Delete_Project">
+        <test-method signature="addNewCustomer()[pri:0, instance:testCases.Delete_Project@4ac3c60d]" started-at="2023-01-03T13:30:06 IST" name="addNewCustomer" finished-at="2023-01-03T13:30:42 IST" duration-ms="36295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewCustomer -->
+      </class> <!-- testCases.Delete_Project -->
       <class name="testCases.RealPOMCustomer">
-        <test-method signature="addNewCustomer()[pri:0, instance:testCases.RealPOMCustomer@4b6579e8]" started-at="2022-12-23T08:50:47 IST" name="addNewCustomer" finished-at="2022-12-23T08:51:28 IST" duration-ms="41455" status="PASS">
+        <test-method signature="addNewCustomer()[pri:0, instance:testCases.RealPOMCustomer@3911c2a7]" started-at="2023-01-03T13:29:29 IST" name="addNewCustomer" finished-at="2023-01-03T13:30:06 IST" duration-ms="36973" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewCustomer -->
       </class> <!-- testCases.RealPOMCustomer -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="testCases.LoginTestCase2">
+        <test-method signature="login()[pri:0, instance:testCases.LoginTestCase2@7a69b07]" started-at="2023-01-03T13:29:17 IST" name="login" finished-at="2023-01-03T13:29:29 IST" duration-ms="11721" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testCases.LoginTestCase2 -->
+    </test> <!-- Login test case -->
+  </suite> <!-- Login suite -->
 </testng-results>
