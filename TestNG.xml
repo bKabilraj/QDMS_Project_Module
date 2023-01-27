@@ -2,17 +2,17 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Login suite">
-<test name="Login test case">
+
+<test name="RealPOMCustomer">
 <classes>
-
-<class name="testCases.LoginTestCase2"/>
 <class name="testCases.RealPOMCustomer"/>
-<class name="testCases.Delete_Project"/>
-
-
-
 </classes>
+</test>
 
+<test name="Delete_Project">
+<classes>
+<class name="testCases.Delete_Project"/>
+</classes>
 </test>
 
 </suite>

@@ -10,7 +10,7 @@ public class RealPOMCustomerPageObjects {
 	
 	@FindBy(how = How.XPATH, using = "//*[@class='sc-htpNat bEzDga']/child::div")
 	public static WebElement master;
-	
+	////*[@class='sc-htpNat bEzDga']/child::div
 	@FindBy(how = How.XPATH, using = "//a[@class='sc-bdVaJa ieeiNp'][@href='#/master/customerlevel']")
 	public static WebElement customer;
 	

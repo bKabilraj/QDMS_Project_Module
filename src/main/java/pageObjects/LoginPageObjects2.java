@@ -14,6 +14,7 @@ public class LoginPageObjects2 {
 	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"root\"]/div/div/div[2]/div/div/div[1]/form/div/div[3]/div/div/span/button")
 	public static WebElement loginButton;
+
 	
 } 
 

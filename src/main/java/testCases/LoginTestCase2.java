@@ -15,7 +15,7 @@ public class LoginTestCase2 {
 				"C:\\Users\\hp\\Downloads\\chromedriver_win32 (2)\\chromedriver.exe\\");
 		
 		WebDriver driver=new ChromeDriver();
-		driver.get("http://qdms-phase-3.s3-website.ap-south-1.amazonaws.com/#/login");
+		driver.get("http://192.168.1.36:3000/#/login");
 		Thread.sleep(3000);
 		
 		PageFactory.initElements(driver, LoginPageObjects2.class);

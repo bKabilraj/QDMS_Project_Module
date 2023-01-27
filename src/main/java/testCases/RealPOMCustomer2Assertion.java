@@ -1,47 +1,63 @@
 package testCases;
 
+
+
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pageObjects.LoginPageObjects2;
 import pageObjects.RealPOMCustomerPageObjects;
 
-public class RealPOMCustomer {
+public class RealPOMCustomer2Assertion {
  
+//	String name="addProjectButton";
+//	//Border shape=none;
+//	Style style="rgb(0, 19, 40)";
+//	boolean value=false;
+	
 	@Test
 	public void addNewCustomer() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", 
 				"C:\\Users\\hp\\Downloads\\chromedriver_win32 (2)\\chromedriver.exe\\");
 		WebDriver driver=new ChromeDriver();
-		driver.get("http://192.168.1.36:3000/#/login");
+		driver.get("http://192.168.1.35:8083/#/login");
 		Thread.sleep(3000);
 		driver.manage().window().maximize();
-		
 		
 		PageFactory.initElements(driver, LoginPageObjects2.class);
 		
 		LoginPageObjects2.UserName.sendKeys("admin");
 		LoginPageObjects2.PassWord.sendKeys("tokyo@admin");
 		LoginPageObjects2.loginButton.click();
-		Thread.sleep(5000);
-//		LoginPageObjects2.UserName(driver).sendKeys("admin");
-//		LoginPageObjects2.PassWord(driver).sendKeys("tokyo@admin");
-//		LoginPageObjects2.loginButton(driver).click();
-//		Thread.sleep(3000); 
+		Thread.sleep(3000);
+		
 		PageFactory.initElements(driver, RealPOMCustomerPageObjects.class);
-
 		
 		RealPOMCustomerPageObjects.master.click();
-		Thread.sleep(3300); 
-		
 		RealPOMCustomerPageObjects.customer.click();
-		Thread.sleep(3200);
-		
 		RealPOMCustomerPageObjects.addProjectButton.click();
-		Thread.sleep(3200);
+		
+		Point location = RealPOMCustomerPageObjects.addProjectButton.getLocation();
+	//	   int actual_x = location.getX();
+	 //      int actual_y = location.getY();
+	       
+        
+		
+		//Assert.assertTrue(false, "This should not be true");
+//		Assert.assertEquals(name, "addProjectButton");
+		
+		//<button 
+		//type="button" 
+		//class="ant-btn sc-gZMcBi dMdnOw" 
+		//style="background: rgb(0, 19, 40); color: white; border: none; width: auto; margin-left: -10px;">
+		
+
 		
 		RealPOMCustomerPageObjects.selectPlant.click();
 		Thread.sleep(3200); 
@@ -73,6 +89,19 @@ public class RealPOMCustomer {
 		RealPOMCustomerPageObjects.selectDate.sendKeys(Keys.RETURN);
 		RealPOMCustomerPageObjects.subProBut.click();
 		
+Point expectedLocation = new Point(102, 32);
+        
+        Dimension size_of_icon = RealPOMCustomerPageObjects.addProjectButton.getSize();
+        System.out.println(size_of_icon);
+    
+        
+
+        
+        String colo = RealPOMCustomerPageObjects.addProjectButton.getCssValue("color");
+        System.out.println(location);
+        String expected_color = "rgb(255, 255, 255, 1)";
+        Assert.assertEquals(expectedLocation,location);
+        Assert.assertEquals(colo, expected_color);
 //		
 //		RealPOMCustomerPageObjects.master(driver).click();
 //		Thread.sleep(3200);
